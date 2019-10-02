@@ -149,7 +149,7 @@ createRestaurantHTML = (restaurant) => {
   image.className = 'restaurant-img';
 
   // Alt tag added for Images
-  image.src = DBHelper.imageUrlForRestaurant(restaurant ), alt={restaurant};
+  image.src = DBHelper.imageUrlForRestaurant(restaurant ), alt={restaurant.name};
   
   
   li.append(image);
