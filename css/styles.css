@@ -437,32 +437,46 @@ nav h1 a {
 
 }
 
-.card{
-    width: 10px;
-}
+
 #write-review label {
     display: inline-block;
     width: 100px;
 }
-
-#write-review input, 
-#write-review textarea {
+.form{
+    width: 100px;
+    color:white;
+}
+.form h3{
+    color: #f58500;
+    width:270%;
+}
+.form-input{
     margin: 10px;
     padding: 5px;
     
 }
 
-#write-review textarea {
+.comment{
+    display: inline-block;
+    width: 270%;
+    height: 100px; 
+}
+
+.review-input{
     display: inline-block;
     width: 250%;
     height: 100px;
 }
-
-#write-review h3 {
-    margin-top: 20px;
-    color: #f58500;
-    
+.rating{
+    margin: 10px;
+    padding: 5px;
 }
+
+.color{
+
+}
+
+
 
 table {
     width: 90%;
