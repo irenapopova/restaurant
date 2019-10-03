@@ -1,3 +1,10 @@
+self.addEventListener('install', function(event) {
+  // Perform install steps
+});
+
+
+
+
 let restaurants,
   neighborhoods,
   cuisines
@@ -146,13 +153,18 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
   const image = document.createElement('img');
+  
   image.className = 'restaurant-img';
 
   // Alt tag added for Images
-  image.src = DBHelper.imageUrlForRestaurant(restaurant ), alt={restaurant.name};
+  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  // Added Alt tags to images 
+  image.alt = DBHelper.imageUrlForRestaurant(restaurant.photograph);
+  
+
   
   
-  li.append(image);
+  li.append(image)
 
   // h3 Tag added
   const name = document.createElement('h3');

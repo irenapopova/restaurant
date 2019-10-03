@@ -89,7 +89,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   // alt tag added
-  image.src = DBHelper.imageUrlForRestaurant(restaurant); alt={restaurant.name};
+  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+    // Added Alt tags to images 
+  image.alt = DBHelper.imageUrlForRestaurant(restaurant.photograph);
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
