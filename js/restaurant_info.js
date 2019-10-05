@@ -149,8 +149,9 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 
 /**
  * Create review HTML and add it to the webpage.
- */
-createReviewHTML = (review) => {
+  I replace this code with the code below */
+/*
+ createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
   name.innerHTML = review.name;
@@ -170,7 +171,49 @@ createReviewHTML = (review) => {
 
   return li;
 }
+*/
+/**
+ the code bellow is a new way to Create review HTML and add it to the webpage.
+ */
+createReviewHTML = (review) => {
+  const li = document.createElement('li');
+  const reviewHeader = document.createElement('div');
+  reviewHeader.className = 'row review-header'
+  const reviewBody = document.createElement('div');
+  reviewBody.className = 'review-body'
+  const nameDiv = document.createElement('div');
+  nameDiv.className = 'col-5'
+  const name = document.createElement('p');
+  name.innerHTML = review.name;
+  name.className = 'name'
+  nameDiv.appendChild(name);
+  reviewHeader.appendChild(nameDiv);
 
+  const dateDiv = document.createElement('div');
+  dateDiv.className = 'col-7'
+  const date = document.createElement('p');
+  date.innerHTML = review.date;
+  date.className = 'date'
+  dateDiv.appendChild(date);
+  reviewHeader.appendChild(dateDiv);
+
+  const rating = document.createElement('p');
+  rating.innerHTML = `Rating: ${review.rating}`;
+  rating.className = 'review-rating'
+  reviewBody.appendChild(rating);
+
+  const comments = document.createElement('p');
+  comments.innerHTML = review.comments;
+  comments.className = 'review-comment'
+  reviewBody.appendChild(comments);
+
+  li.appendChild(reviewHeader);
+  li.appendChild(reviewBody);
+  return li;
+}
+
+
+/* **************************************************** */
 /**
  * Add restaurant name to the breadcrumb navigation menu
  */
