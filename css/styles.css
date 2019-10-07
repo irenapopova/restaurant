@@ -317,13 +317,14 @@ nav h1 a {
 
 .inside #footer {
     bottom: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
 }
 
 #restaurant-name {
-    color: #f18200;
+    color:#a3002d;;
     font-family: Arial, sans-serif;
+    /*  font-size: 1.6rem;  an idea  */
     font-size: 20pt;
     font-weight: 200;
     letter-spacing: 0;
@@ -340,6 +341,14 @@ nav h1 a {
     border-radius: 1px 40px / 40px;
 }
 
+.ratio-container>* {
+    position: inherit;
+}
+
+.favorite-icon--off {
+    opacity: .9;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAQAAAAm93DmAAAABGdBT…AwSRupdQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=);
+}
 #restaurant-address {
     font-size: 12pt;
     font-weight: bolder;
@@ -415,6 +424,7 @@ nav h1 a {
     width: 100%;
     border-radius: 1px 40px / 40px;
     box-shadow: 0 0 15px 2px;
+
 }
 
 
@@ -446,10 +456,11 @@ nav h1 a {
     text-align: center;
     border-radius: 8px;
     margin-left: 20px;
-    background: #A35A00;
+    background: #a3002d;;
     text-transform: uppercase;
     width: 100px;
     color: #f3f3f3;
+    margin-top: 20px;
   }
 
   #reviews-list .review-comment{
@@ -494,6 +505,8 @@ nav h1 a {
     width: 100px;
     color:white;
 }
+
+
 .form h3{
     color: #f58500;
     width:270%;
@@ -518,6 +531,15 @@ nav h1 a {
 .rating{
     margin: 10px;
     padding: 5px;
+}
+/* I want to create rating with stars */
+#reviews-list .rating .icon--active {
+    color: #125b8a;
+}
+/* I want to crate in the review form  5 stars rating scale*/
+.starability-checkmark>label {
+    position: static;
+    z-index: 1;
 }
 
 .color{
@@ -576,6 +598,29 @@ table {
     .inside #footer {
         width: 100%;
     }
+}
+
+.svg[Attributes Style] {
+    x: 0px;
+    y: 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.svg:not(:root) {
+    overflow: hidden;
+}
+.scroll-to-top {
+    position: absolute;
+    top: -24px;
+    right: calc(50% - 24px);
+    background: #252831;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    will-change: transform;
 }
 
 @media screen and (max-width: 500px) {

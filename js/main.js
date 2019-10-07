@@ -132,6 +132,7 @@ resetRestaurants = (restaurants) => {
     self.markers.forEach(marker => marker.remove());
   }
   self.markers = [];
+  
   self.restaurants = restaurants;
 }
 

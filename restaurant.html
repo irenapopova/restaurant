@@ -48,7 +48,10 @@
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
       <h2 id="restaurant-name"></h2>
+      <div class="ratio-container">
       <img id="restaurant-img">
+      <button title="Favorite" tabindex="0" aria-label="favorite restaurant" role="switch" class="favorite-icon"></button>
+      </div>
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
       <table id="restaurant-hours"></table>
@@ -67,13 +70,15 @@
           <div class= "color">
           <div class= "form">
               <li><h3>Write a review</h3>
-              <p id = "text">
+              <p id = "text" class="form">
                 <label for="name">name</label>
                 <input type="text" class= "form-input">
                 </p>
-                <p>
-                <label foe="rating">rating</label><input type="number" class="rating" min="0" max="5">
-                </p>
+                <div class= "form">
+                    <label foe="rating">rating</label><input type="number" class="rating" min="0" max="5">
+                </div>
+          
+
                 <p>
                   <label for="comments">comments</label><br /><textarea class="comment"></textarea>
                 </p>
@@ -82,6 +87,52 @@
               </label>
             </div>
     
+<!--Review Form second way
+<div class="loader-content-container">
+        <p>Loading...</p>
+        <span class="loader-content"></span>
+      </div>
+
+
+   <section id="add-reviews-container" role="form" aria-labelledby="add-reviews-label">
+      <h2 id="add-reviews-label">Add Review</h2>
+      <form aria-label="Add a review" id="form-review">
+        <div class="form-group">
+          <fieldset class="starability-checkmark" id="frating" tabindex="0">
+            <legend>Rating <span class="required">*</span></legend>
+
+            <input type="radio" id="checkmark-rate5" name="rating" value="5">
+            <label for="checkmark-rate5" title="Amazing">5 stars</label>
+
+            <input type="radio" id="checkmark-rate4" name="rating" value="4">
+            <label for="checkmark-rate4" title="Very good">4 stars</label>
+
+            <input type="radio" id="checkmark-rate3" name="rating" value="3">
+            <label for="checkmark-rate3" title="Average">3 stars</label>
+
+            <input type="radio" id="checkmark-rate2" name="rating" value="2">
+            <label for="checkmark-rate2" title="Not good">2 stars</label>
+
+            <input type="radio" id="checkmark-rate1" checked name="rating" value="1">
+            <label for="checkmark-rate1" title="Terrible">1 star</label>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <label for="fname">Name <span class="required">*</span></label>
+          <input type="text" minlength="2" maxlength="20" class="form-control" name="name" required aria-required="true" id="fname">
+        </div>
+        <div class="form-group">
+          <label for="fcomment">Review <span class="required">*</span></label>
+          <textarea name="comments" minlength="20" maxlength="500" class="form-control" required aria-required="true" id="fcomment"></textarea>
+        </div>
+        <button type="submit">Post review</button>
+        <div id="validattion-message" class="alert alert-danger fadein" role="alert"></div>
+      </form>
+    </section>
+-->
+
+<!--End Reviews-->
+
   </main>
 
 
@@ -93,6 +144,13 @@
 
   <!-- Beginning footer -->
   <footer id="footer">
+
+      <button title="Back to top" class="scroll-to-top" aria-label="Back to top">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+            <polygon fill="#FFFFFF" points="8,2.8 16,10.7 13.6,13.1 8.1,7.6 2.5,13.2 0,10.7 " />
+          </svg>
+        </button>
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->
